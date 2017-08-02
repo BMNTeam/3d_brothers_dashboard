@@ -1,0 +1,27 @@
+- var utils = require('lib/utils')
+- var uploads = require('lib/mediator').uploads
+- var upload = uploads ? uploads.get(id) : null
+td.pkg-name= name
+td.pkg-status
+  case status
+    when 'uploading'
+      | Uploading
+      if upload
+        |  (#{Math.floor(upload.get('uploaded') / upload.get('total_size') * 100)}%)
+    when 'extracting': | Extracting
+    when 'processing': | Processing
+    when 'processing_failed': | Processing Failed
+    when 'ready': | Ready
+    when 'archived': | Archived
+td.pkg-size
+  if size > 0
+    = utils.humanSize(size)
+  else
+    | -
+td.pkg-ops
+  .btn-group
+    if status == 'ready'
+      button.btn.btn-xs.btn-info.pkg-info(type="button")
+        i.fa.fa-info-circle
+    button.btn.btn-xs.btn-danger.pkg-remove(type="button")
+      i.fa.fa-trash-o

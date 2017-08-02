@@ -1,0 +1,12 @@
+- var globs = require('lib/globs')
+- var utils = require('lib/utils')
+td.frame-no= frame
+td.frame-avg-cpu= average_cpu + '%'
+td.frame-peak-cpu= peak_cpu + '%'
+td.frame-avg-ram= utils.humanSize(average_ram)
+td.frame-peak-ram= utils.humanSize(peak_ram)
+td.frame-render-time= utils.humanTime(render_time)
+td.frame-cost= cost.toFixed(2) + 'c'
+td.frame-ops
+  a.btn.btn-xs.job-download.noscript(href=globs.baseUrl + '/jobs/' + job_id + '/download/' + frame)
+    i.fa.fa-download

@@ -1,0 +1,35 @@
+- var globs = require('lib/globs')
+- var utils = require('lib/utils')
+- frames = utils.parseFrames(frames)
+td.job-package= "Package name should go here"
+td.job-name= name
+td.job-frames
+  = completed_frames + ' / ' + frames.length
+td.job-render-time
+  = utils.humanTime(render_time)
+td.job-cost
+  = cost.toFixed(2) + 'c'
+td.job-status
+  case status
+    when 'inactive': | Inactive
+    when 'queued': | Queued
+    when 'rendering': | Rendering
+    when 'completed': | Completed
+    when 'failed': | Failed
+td.job-ops
+  .btn-group
+    if completed_frames > 0
+      a.btn.btn-xs.job-download.noscript(href=globs.baseUrl + '/jobs/' + id + '/download')
+        i.fa.fa-download
+      a.btn.btn-xs.btn-info.job-frame-list
+        i.fa.fa-th
+    case status
+      when 'inactive'
+        button.btn.btn-xs.btn-success.job-resume(type="button")
+          i.fa.fa-play
+      when 'queued'
+      when 'rendering'
+        button.btn.btn-xs.btn-warning.job-suspend(type="button")
+          i.fa.fa-pause
+    button.btn.btn-xs.btn-danger.job-remove(type="button")
+      i.fa.fa-trash-o

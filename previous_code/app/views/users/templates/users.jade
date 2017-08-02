@@ -1,0 +1,18 @@
+.page-header
+  h1 Users
+
+.row
+  .col-sm-12
+    .panel
+      .panel-heading#users-header
+        span.panel-title With pagination
+        .panel-heading-controls
+      .panel-body.no-padding-vr
+        table.user-table.table.dataTable
+          thead
+            tr
+              th.user-name Name
+              th(data-order-by='email').user-email.sorting Email
+              th(data-order-by='credits').user-credits.sorting Credits
+              th.user-ops
+          tbody#user-list

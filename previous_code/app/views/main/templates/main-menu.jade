@@ -1,0 +1,18 @@
+- var mediator = require('lib/mediator')
+- var utils = require('lib/utils')
+#main-menu(role='navigation')
+  #main-menu-inner
+    ul.navigation
+      if mediator.user.get('admin')
+        li
+          a(href=utils.reverse('users#list'))
+            i.menu-icon.fa.fa-users
+            span.mm-text Users
+      li
+        a(href=utils.reverse('packages#list'))
+          i.menu-icon.fa.fa-folder
+          span.mm-text Packages
+      li
+        a(href=utils.reverse('jobs#list'))
+          i.menu-icon.fa.fa-tasks
+          span.mm-text Jobs

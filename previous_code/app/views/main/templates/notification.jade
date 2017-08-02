@@ -1,0 +1,7 @@
+- var md = require('lib/utils').markdown
+- var cls = ['default', 'info', 'success', 'warning', 'danger'][Kind]
+.notification
+  .notification-title(class='text-' + cls)= Category.toUpperCase()
+  .notification-description!= md.toHTML(Message)
+  time.notification-ago(datetime=CreatedAt)
+  .notification-icon.fa.fa-hdd-o(class='bg-' + cls)

@@ -1,0 +1,28 @@
+{
+  "author": "3D Brothers",
+  "name": "cgifarm",
+  "description": "CGIFarm",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  },
+  "dependencies": {
+    "auto-reload-brunch": ">= 1.0 < 1.9",
+    "bower": "^1.4.2",
+    "brunch": "~1.8.3",
+    "clean-css-brunch": ">= 1.0 < 1.9",
+    "coffee-script-brunch": ">= 1.0 < 1.9",
+    "css-brunch": ">= 1.0 < 1.9",
+    "jade-brunch": ">= 1.0 < 1.9",
+    "javascript-brunch": ">= 1.0 < 1.9",
+    "less-brunch": ">= 1.0 < 1.9",
+    "marked": "~0.3.2",
+    "uglify-js-brunch": ">= 1.0 < 1.9"
+  },
+  "devDependencies": {}
+}

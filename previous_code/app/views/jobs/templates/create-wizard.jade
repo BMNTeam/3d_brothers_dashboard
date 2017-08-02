@@ -1,0 +1,46 @@
+- var globs = require('lib/globs')
+#create-wizard.modal.fade(role="dialog")
+  .modal-dialog
+    .modal-content
+      .wizard.no-margin
+        .wizard-wrapper.no-border
+          ul.wizard-steps
+            li(data-target='#create-wizard-details')
+              span.wizard-step-number 1
+              span.wizard-step-caption
+                | Create job
+                span.wizard-step-description Job details
+        .wizard-content.panel.no-margin.no-border-hr.no-border-b.no-padding-hr
+          form#create-wizard-details.wizard-pane.form-bordered
+            .form-group.no-padding-t.no-border-t.panel-padding-h
+              label.col-sm-3.control-label(for='job-details-pkg') Name
+              .col-sm-9
+                input#job-details-name.form-control(name='name', required)
+            .form-group.panel-padding-h
+              label.col-sm-3.control-label(for='job-details-pkg') Package
+              .col-sm-9
+                select#job-details-pkg.form-control(name='package',disabled, required)
+                  option -- Select package --
+            .form-group.panel-padding-h
+              label.col-sm-3.control-label(for='job-details-scene') Scene
+              .col-sm-9
+                select#job-details-scene.form-control(name='scene',disabled, required)
+                  option -- Select scene --
+            .form-group.panel-padding-h.job-camera
+              label.col-sm-3.control-label(for='job-details-camera') Camera
+              .col-sm-9
+                select#job-details-camera.form-control(name='camera', disabled, required)
+                  option -- Select camera --
+            .form-group.panel-padding-h
+              label.col-md-3.control-label(for='job-details-frames') Frames
+              .col-md-9
+                input#job-details-frames.form-control(type='text', name='frames', placeholder='Frame range', required)
+            div#job-error.panel-padding-h.hidden
+              .alert.alert-danger
+                button.close(type='button') ×
+                strong Oh snap!
+                | 
+                span.message
+            hr
+            .panel-padding-h.pull-right
+              button(type='submit').btn.btn-success.wizard-start-btn Create

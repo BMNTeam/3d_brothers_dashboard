@@ -1,0 +1,7 @@
+td.user-name=  first_name + ' ' + last_name
+td.user-email= email
+td.user-credits!= credits.toFixed(2) + '&nbsp;'
+td.user-ops
+  .btn-group
+    button.btn.btn-xs.btn-danger.user-remove(type="button")
+      i.fa.fa-trash-o

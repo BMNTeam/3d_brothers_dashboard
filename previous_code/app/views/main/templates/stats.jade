@@ -1,0 +1,16 @@
+#stats.panel
+  .panel-body.no-padding
+    table.table.table-hover
+      tbody
+        tr.packages
+          td.stat-name Packages
+          td.stat-value= packages
+        tr.jobs
+          td.stat-name Jobs
+          td.stat-value= jobs
+        tr.active-jobs
+          td.stat-name Active jobs
+          td.stat-value= active_jobs
+        tr.failed-jobs
+          td.stat-name Failed jobs
+          td.stat-value= failed_jobs

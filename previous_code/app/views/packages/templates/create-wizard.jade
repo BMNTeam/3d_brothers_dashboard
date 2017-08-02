@@ -1,0 +1,43 @@
+- var globs = require('lib/globs')
+#create-wizard.modal.fade(role="dialog")
+  .modal-dialog
+    .modal-content
+      .wizard.no-margin
+        .wizard-wrapper.no-border
+          ul.wizard-steps
+            li(data-target='#create-wizard-upload')
+              span.wizard-step-number 1
+              span.wizard-step-caption
+                | Step 1
+                span.wizard-step-description Package upload
+            li(data-target='#create-wizard-upload-status')
+              span.wizard-step-number 2
+              span.wizard-step-caption
+                | Step 2
+                span.wizard-step-description Upload status
+
+        .wizard-content.panel.no-margin.no-border-hr.no-border-b.no-padding-hr
+          form#create-wizard-upload.wizard-pane.form-bordered
+            .form-group.no-padding-t.no-border-t.panel-padding-h
+              label.col-md-2.control-label(for='pkg-details-name') Name
+              .col-md-10
+                input#pkg-details-name.form-control(type='text', name='name', placeholder='Package name', minlength=3, maxlength=50, required)
+            .form-group.no-padding-t.no-border-t.panel-padding-h
+              span#pkg-details-filebtn.btn.btn-flat.btn-labeled.form-control.input-group
+                i.btn-label.fa.fa-plus
+                | Select file
+                input#pkg-details-file.form-control(type='file', name='file', required)
+            div#pkg-error.panel-padding-h.hidden
+              .alert.alert-danger
+                button.close(type='button') ×
+                strong Oh snap!
+                | 
+                span.message
+            hr
+            .panel-padding-h.pull-right
+              button(type='submit').btn.btn-primary.wizard-start-btn Upload
+
+          form#create-wizard-upload-status.wizard-pane.form-bordered
+            hr
+            .btn-group.panel-padding-h.pull-right
+              button(type='button').btn.btn-danger.wizard-close-btn Close

@@ -1,0 +1,16 @@
+- var globs = require('lib/globs')
+#pkg-info.modal.fade(role='dialog')
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title Package Info
+      .modal-body
+        .form-group.panel-padding-h
+          label.col-sm-3.control-label(for='pkg-info-scene') Scene
+          .col-sm-9
+            select#pkg-info-scene.form-control(name='scene',disabled)
+              option -- Select scene --
+        hr
+        table#pkg-scene-entries.table
+

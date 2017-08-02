@@ -1,0 +1,33 @@
+- var user = require('lib/mediator').user
+.page-header
+  h1 Jobs
+  if !user.get('admin')
+    .pull-right
+      button.btn.btn-sm.job-create(type="button")
+        i.fa.fa-plus
+
+.row
+  .col-sm-12
+    .panel
+      .panel-heading#jobs-header
+        span.panel-title
+          a.editable.status-filter(href='#')
+          |  jobs, from 
+          a.editable.package-filter(href='#')
+          |  using 
+          a.editable.renderer-filter(href='#')
+        .panel-heading-controls
+
+      .panel-body.no-padding-vr
+        table.job-table.table.dataTable
+          thead
+            tr
+              th(data-order-by='package').sorting.job-package Package
+              th(data-order-by='name').sorting.job-name Name
+              th.job-frames Frames
+              th(data-order-by='render_time').sorting.job-cost Render Time
+              th(data-order-by='cost').sorting.job-cost Cost
+              th(data-order-by='status').sorting.job-status Status
+              th.job-ops
+          tbody#job-list
+

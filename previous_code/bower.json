@@ -1,0 +1,24 @@
+{
+  "name": "cgifarm",
+  "version": "0.1.0",
+  "main": "public/javascripts/app.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "chaplin": "~1.0.0",
+    "console-polyfill": "~0.1.0",
+    "lodash": "~2.4.0",
+    "crosstab": "~0.2.12"
+  },
+  "overrides": {
+    "backbone": {
+      "dependencies": {
+        "lodash": "*"
+      },
+      "main": "backbone.js"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+- var utils = require('lib/utils')
+#main-navbar(class="navbar navbar-inverse", role="navigation")
+  button#main-menu-toggle(type='button')
+    i.navbar-icon.fa.fa-bars.icon
+    span.hide-menu-text HIDE MENU
+  .navbar-inner
+    // Main navbar header
+    .navbar-header
+      // Logo
+      a.navbar-brand(href='/')
+        strong CGI
+        | Farm
+      // Main navbar toggle
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-navbar-collapse')
+        i.navbar-icon.fa.fa-bars
+    #main-navbar-collapse.collapse.navbar-collapse.main-navbar-collapse
+      div
+        .right.clearfix
+          ul.nav.navbar-nav.pull-right.right-navbar-nav
+            li.nav-icon-btn.nav-icon-btn-danger.dropdown.notifications
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                span.notification-no.label
+                i.nav-icon.fa.fa-bullhorn
+                span.small-screen-text Notifications
+            if !admin
+              li.credits
+                a(href="#")!= credits.toFixed(2) + '&nbsp;'
+                  i.fa.fa-money
+            li.dropdown
+              a.dropdown-toggle.user-menu(href='#', data-toggle='dropdown')
+                img(src=utils.gravatar(email, 25), alt='avatar')
+                span= first_name + ' ' + last_name
+              ul.dropdown-menu
+                li
+                  a(href=utils.reverse('authentication#logout'))
+                    i.dropdown-icon.fa.fa-power-off
+                    | Log Out

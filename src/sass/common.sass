@@ -1,0 +1,379 @@
+@import "select"
+@import "pagination"
+.nf
+  float: none !important
+.p-l-10
+  padding-left: 10px
+.fr
+  float: right
+
+// fix pause button position on jobs table
+.action-button.pause-button
+  position: relative
+  .md.md-pause.fix-position:before
+    position: absolute
+    left: 1px
+    top: -2px
+// fix menu position on jobs table
+.table.job-table
+  .md.md-menu
+    position: relative
+    top: -2px
+    cursor: pointer
+  .fa.fa-arrows-alt
+    position: relative
+    top: -2px
+
+.click-action
+  z-index: -1
+  display: flex
+  transition: all ease-in .5s
+  opacity: 0
+  &:before
+    content: ''
+    position: absolute
+    left: 50%
+    top: 100%
+    border-style: solid
+    border-width: 8px 8px 0 8px
+    border-color: #4279bd transparent transparent transparent
+  position: absolute
+  top: -200%
+  left: -290%
+  padding: 7px 15px
+  background-color: #4279bd
+  border-radius: 3px
+
+  align-items: center
+  .pause-render
+    &:first-child
+      margin-left: 0
+  .clone-job i, .stop-render i, .delete-job i
+    margin: 0
+  .pop-up-element
+    margin-left: 3px
+.posr
+  position: relative
+
+
+.bmn-pop-up-wrapper
+  position: relative
+  display: inline-block
+
+
+.status.budget
+  span:first-child
+    margin-top: 4px
+    padding-left: 5px
+
+
+input[type="checkbox"]:checked:after
+  font-size: 1em
+  text-indent: 3px
+  line-height: 1.5em
+
+.full-screen--icon
+  padding-top: 3px
+  padding-right: 15px
+.frame-text
+  padding-left: 20px
+.full-image-wrapper
+  .view-on-hover--description
+    transform: translateY(-60px)
+    color: #000
+
+    padding: 15px 0
+    transition: all ease-in .3s
+    background-color: rgba(255, 255, 255, .75)
+    .full-screen--icon
+      cursor: pointer
+      font-size: 1.4em
+      color: #000
+
+  background-size: cover
+  background-repean: no-repeat
+  min-height: 200px
+  overflow: hidden
+  &:hover
+    .view-on-hover--description
+      margin-bottom: 0
+      transform: translateY(0px)
+
+.job-chart
+  padding: 10px
+.pause-button
+  &.active
+    background-color: #04be5b
+    .md-play
+      &::before
+        content: "\f0b9"
+  
+.action-button
+  &.download-button
+    background-color: #fff
+
+.fa-stop-circle-o.pop-up-element.bmn-fix
+  position: relative
+  top: -2px
+
+
+.fix-chart-on-tablet
+  @media screen and  (min-width: 803px) and (max-width: 1310px)
+    margin-bottom: 33px
+
+.dropzone
+  background: transparent !important
+  padding: 0 !important
+  min-height: 0 !important
+  border: none !important
+.package-drop
+  padding: 40px 0
+#packages-upload
+  display: none
+#package-submit
+  background: transparent
+  color: #04be5b
+  text-transform: uppercase
+  border: 1px solid #04be5b
+  border-radius: 4px
+  padding: 3px 14px
+  transition: all ease-in .3s
+  &:hover
+    background-color: #04be5b
+    color: #fff
+
+.dz-preview
+  display: none!important
+
+.delete-package
+  i
+    transition: all ease-in .4s
+    &:hover
+      color: red
+
+.dz-drag-hover
+  .package-drop
+    transition: all ease-in .4s
+    border-color: #04be5b
+    color: #04be5b
+.panel-info>.panel-heading
+  background-color: #505e6d!important
+.btn-primary
+  &.bmn-team--confirm
+    background-color: #243c53 !important
+    border: none !important
+    outline: none !important
+    &:hover
+      background-color: #162231 !important
+      border: none !important
+      outline: none !important
+.modal-text
+  color: black
+#upload-table-body
+  .form-control
+    width: 100%
+    background-color: #323b44 !important
+    margin: 0
+    border: none
+    height: auto
+    outline: none
+    border-bottom: 1px solid grey
+    transition: all ease-in .2s
+    &:focus
+      border-bottom: 1px solid green
+  .package-button
+    span
+      position: relative
+    &.edit
+      span
+        margin-bottom: -2px
+        background-color: #045b2d
+        i
+          position: absolute
+          left: 4px
+          top: 3px
+          font-size: .9em
+    &.cancel
+      span
+        background-color: #505e6d
+        i
+          position: absolute
+          left: 3px
+          top: 2px
+    &.save
+      span
+        background-color: green
+        i
+          position: absolute
+          left: 4px
+          top: 3px
+          font-size: .9em
+//Dashboard animation section
+.slide-down-animation
+  transition: all linear .3s !important
+.bmn-overlay--wrapper
+  display: block
+  position: absolute
+  transition: all linear .25s
+  margin-top: -32px
+  opacity: 1
+  left: 0
+  width: 100%
+  height: 0
+  z-index: 0
+  overflow: hidden
+  &.active
+    overflow-y: auto
+    height: 100%
+    opacity: 1
+  .job-details
+    background: #505e6d
+    width: 100%
+    margin-top: 0px
+    padding: 10px 20px
+    position: absolute
+    left: 0
+    opacity: 1
+    z-index: -1
+    transition-delay: .3s
+  .job-budget-input.bmn-fix
+    color: #ccc
+    margin: 0
+
+.bmm-pause-render-corrections
+  position: relative
+  span
+    i
+      position: relative
+      &::before
+        position: absolute
+        left: -9px
+        top: -25px
+
+
+
+//Packages info states
+
+.message-info--wrapper
+  border-radius: 50%
+.package-info--name
+  background-color: #343a48
+  width: 100%
+  border-top-left-radius: 15px
+  border-top-right-radius: 15px
+
+  .page-name, .close-button
+    padding: 20px 10px
+    padding-left: 20px
+    color: #fff
+    font-size: 1.5em
+    line-height: 2em
+    font-weight: 900
+.page-name
+  float: left
+
+.close-button
+  float: right
+  color: #aaa !important
+  i
+    transition: all ease-in .3s
+    &:hover
+      cursor: pointer
+      color: #ccc !important
+    padding-right: 5px
+.selected-scene--search
+  color: black
+  padding: 20px 10px
+  background-color: #fff
+.choose-your-scene--search
+  select
+    width: 100%
+    background: #fff
+    color: black
+    border-bottom: 1px solid #42535f
+
+.log-files
+  padding: 10px
+  border-top: 1px solid lightgrey
+
+  padding-top: 20px
+  margin-top: 15px
+  p
+    margin-bottom: 0
+    padding: 0 5px
+    background: #42535f
+    color: #add8e6
+    line-height: 2.1em
+    &.missing
+      background: #ffaa00
+      color: #000
+.choose-your-scene--label
+  padding: 6px 0
+#message-info--wrapper
+
+#create-submit-button
+  transition: all ease-in .4s
+  &:hover
+    background-color: #f27a10
+    color: #fff
+    
+.job-details
+  .pagination-table
+    tbody
+      tr
+        transition: all ease-in .3s
+        cursor: pointer
+        &:hover
+          background-color: #416c82!important
+        &.selected
+          background-color: #416c82!important
+          &:hover
+            background-color: #2d3544
+
+      tr.even
+        background-color: #475564
+
+
+.table
+  thead
+    tr
+      th
+        vertical-align: top
+  //tbody
+  //  tr
+  //    td
+  //      &:last-child
+  //        a, div
+  //          text-align: right
+  //          margin-left: 2px
+
+#jobs_page
+  padding-left: 10px
+
+.bmn-jobs--buttons
+  margin-top: 10px
+  margin-bottom: 5px
+
+.create--button
+  transition: all ease-in .4s
+  &:hover
+    background-color: #ccc!important
+    color: #343a48!important
+
+.jobs-frames
+  padding-left: 2px
+  padding-top: 10px
+
+.dataTables_filter input
+  width: 100px !important
+
+.table.dataTable
+    thead
+      .sorting_desc, .sorting_asc, .sorting
+        &::after
+          padding-right: 9px
+.job-details
+  .dataTables_length
+    float: right
+    padding-top: 3px
+    padding-right: 40px

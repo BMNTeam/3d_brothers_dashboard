@@ -1,0 +1,578 @@
+html {
+    background: #2d353d;
+}
+
+body {
+    background: #2d353d;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, th, td {
+    color: #fff;
+}
+
+a, a:hover, a:focus {
+    color: #ccc;
+}
+
+label {
+    color: #ccc;
+    font-weight: 400;
+}
+
+input[type="text"], input[type="number"], input[type="checkbox"]:after, select {
+    background: #374355;
+    color: #aabfca;
+    margin: 0 8px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 4px;
+    padding: 3px 14px;
+}
+
+.label-input input[type="checkbox"], input[type="checkbox"] {
+    width: 20px;
+    color: #aaaaca;
+    margin: 0 0 0 10px;
+    position: relative;
+}
+
+.label-input input[type="checkbox"]:after, input[type="checkbox"]:after {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    content: " ";
+}
+
+input[type="checkbox"]:checked:after {
+    font-family: FontAwesome;
+    content: "\f00c";
+}
+
+.label-input {
+    margin: 0 0 10px;
+}
+
+.label-input label {
+    width: 20%;
+    text-align: right;
+}
+
+.label-input input, .label-input select {
+    width: 65%;
+}
+
+.render label {
+    width: auto;
+    text-align: left;
+}
+
+.extra-info {
+    width: 70%;
+    color: #ccc;
+    font-size: .9em;
+    float: right;
+}
+
+.topbar .topbar-left {
+    background: #fff;
+}
+
+.logo {
+    background: url(../images/cgi-farm-logo.png) no-repeat;
+    background-size: contain;
+    width: 209px;
+    height: 60px;
+    text-indent: -9999em;
+    margin: 15px;
+    display: block;
+}
+
+.button-menu-mobile, .navbar-default {
+    background: #323b44;
+}
+
+.side-menu.left {
+    background: #fff;
+}
+
+#sidebar-menu > ul > li > a, #sidebar-menu ul ul a {
+    color: #000;
+}
+
+#sidebar-menu > ul > li > a:hover, #sidebar-menu > ul > li > a.active, #sidebar-menu ul ul li.active a {
+    color: #3bafda;
+}
+
+.page-title-box {
+    background: transparent;
+    color: #fff;
+}
+
+.page-title {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.header-title {
+    font-weight: 400;
+}
+
+.menu-title {
+    color: #000;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.cgi-jobs {
+    background: url(../images/jobs-icon.svg);
+    width: 22px;
+    height: 22px;
+}
+
+.cgi-jobs a:hover i {
+    stroke: #3bafda
+}
+
+
+
+.cgi-credits {
+    background: url(../images/credit-icon.png);
+    width: 22px;
+    height: 22px;
+}
+
+#jobs-icon, #purchase-icon path{
+    transition: all ease-in .2s;
+}
+
+.bmn-hover:hover #jobs-icon, .bmn-hover.active #jobs-icon ,
+.bmn-hover:hover #purchase-icon path, .bmn-hover.active #purchase-icon path
+{
+    fill: #3bafda!important;
+}
+
+.cgi-memory {
+    background: url(../images/memory-icon.png);
+    width: 22px;
+    height: 21px;
+}
+
+.cgi-purchase {
+    background: url(../images/purchase-icon.png);
+    width: 22px;
+    height: 16px;
+}
+
+.table {
+    font-size: .9em;
+    position: relative;
+}
+
+.table th {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.table td {
+    color: #ccc;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    border-color: #ccc;
+}
+
+.info-button {
+    color: #39628e;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+th.actions {
+    width: 121px;
+}
+
+td .label {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.action-button {
+    width: 21px;
+    height: 21px;
+    font-size: 1.5em;
+    text-align: center;
+    display: inline-block;
+}
+
+.pause-button {
+    background: #f4ae4c;
+    color: #fff;
+}
+
+.download-button {
+    background: #ccc;
+    color: #333;
+}
+
+.expand-button {
+    background: #fff;
+    color: #3bafda;
+}
+
+.menu-button {
+    background: #4279bd;
+    color: #fff;
+}
+
+.expanded-buttons .action-button {
+    width: 28px;
+    height: 28px;
+    margin: 0 10px 0 0;
+}
+
+
+/** Dashboard **/
+
+.card-box {
+    background: rgba(255, 255, 255, .05);
+}
+
+.widget-chart .list-inline li {
+    width: 24%;
+}
+
+.widget-chart .dropdown-toggle {
+    background: rgba(0, 0, 0, .15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 6px;
+    padding: 3px 5px;
+}
+
+.widget-chart .dropdown-menu li {
+    width: auto;
+}
+
+.widget-chart h4, .widget-chart h5 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.widget-chart h5 {
+    font-size: .9em;
+}
+
+
+/** Jobs **/
+.job-table tr {
+    transition: height .3s ease-in-out;
+}
+
+
+.expanded .status {
+    margin: 0 0 15px;
+}
+
+.frame-image img {
+    width: 100%;
+}
+
+.expanded .widget-chart {
+    background: rgba(0, 0, 0, .15);
+    margin: 0 0 10px;
+    border-radius: 8px;
+    padding: 0 0 8px;
+}
+
+.expanded .widget-chart .list-inline li {
+    width: 23%;
+}
+
+.expanded .widget-chart h4, .expanded .widget-chart h5 {
+    font-size: .9em;
+    margin: 0;
+}
+
+.status-and-actions .status-label {
+    width: 60px;
+    float: left;
+    clear: left;
+}
+
+.expanded-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expanded-list li {
+    margin: 0 0 10px;
+}
+
+.expanded-buttons {
+    width: 70%;
+    float: left;
+}
+
+.expanded-buttons a {
+    margin: 0 0 5px;
+    display: inline-block;
+}
+
+.expanded-buttons i {
+    display: inline-block;
+}
+
+.stop-render .stop-button {
+    background: #fff;
+    color: #ed1f24;
+}
+
+.stop-render i {
+    margin: 6px 4px 0;
+}
+
+.video-preview .preview-button {
+    background: #fff;
+    color: #aaa;
+}
+
+.expanded-buttons .stop-button, .expanded-buttons .preview-button, .expanded-buttons .clone-button, .expanded-buttons .delete-button {
+    margin: 0 10px 0 0;
+}
+
+.clone-job .clone-button {
+    background: #fff;
+    color: #000;
+}
+
+.clone-job i {
+    margin: 4px;
+}
+
+.delete-job .delete-button {
+    background: #e66352;
+    color: #fff;
+}
+
+.delete-job i {
+    margin: 5px 0 0 -1px;
+}
+
+.video-preview i {
+    margin: 6px 2px 0;
+}
+
+.info-button i {
+    position: relative;
+    top: -3px;
+}
+
+.expanded .table {
+    background: none;
+}
+
+.status-and-actions .job-budget-input {
+    width: 70px;
+}
+
+.job-details-closer {
+    background: url(../images/contract.jpg) no-repeat;
+    width: 29px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.popover {
+    background: rgba(66, 121, 189, .75);
+}
+
+.popover.top>.arrow:after{
+    border-top-color: rgba(66, 121, 189, .75);
+}
+
+.job-table .popover-content {
+    min-width: 140px;
+}
+
+.popover-content a {
+    display: inline-block;
+    margin: 0 1px 0 0;
+}
+
+.popover-content a:last-child {
+    margin: 0;
+}
+
+.popover-content .action-button {
+    height: 25px;
+    margin: 0 1px;
+    display: inline-block;
+}
+
+.popover-content .action-button i {
+    margin: 0;
+}
+
+#create-button, #create-submit-button {
+    background: none;
+    color: #f27a10;
+    text-transform: uppercase;
+    border: 1px solid #f27a10;
+    border-radius: 4px;
+    padding: 3px 14px;
+}
+
+#create-button {
+    color: #ccc;
+    border-color: #ccc;
+}
+
+.pane-title {
+    text-align: center;
+    margin: 30px 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.pane-title .title-text {
+    background: #2d353d;
+    color: #4d5a69;
+    padding: 0 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.pane-title:before {
+    width: 100%;
+    border-bottom: 1px solid #4d5a69;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: ' ';
+    z-index: 1;
+}
+
+.pane-content {
+    width: 100%;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+
+.pane-content--wrapper.active {
+    height: 110px;
+}
+
+.pane-content--wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+
+
+/** Packages **/
+.package-info .info-button {
+    background: #4fbcdc;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.upload-modal-launcher {
+    color: #8393a7;
+    font-size: 1.5em;
+    position: relative;
+    top: -20px;
+}
+
+.upload-modal-launcher:before {
+    font-size: 1.5em;
+    margin: 0 8px;
+    content: '+';
+    position: relative;
+    top: 3px;
+}
+
+.modal .modal-dialog .modal-content {
+    background: none;
+    border-radius: 12px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+    background: #505e6d;
+    border: 0;
+    padding: 15px;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+    background: #2d353d;
+    border: 0;
+    padding: 12px 24px;
+}
+
+.modal-body p {
+    color: #ccc;
+    font-size: .9em;
+}
+
+.modal-header .close {
+    color: #fff;
+    font-size: 2em;
+}
+
+.package-drop {
+    color: #4d5a69;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 20px 0;
+    border: 3px dashed #4d5a69;
+	border-radius: 4px;
+	cursor: default;
+}
+
+.package-drop:after {
+    width: 50%;
+    margin: 10px auto;
+    display: block;
+    content: 'Drag and drop one or multiple zipped packages';
+}
+
+.package-drop #fileselect {
+    opacity: 0;
+    display: none;
+}
+
+.package-drop.hover {
+	color: #f00;
+	border-color: #f00;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+}
+
+.package-drop label {
+    display: none;
+}
+
+
+label[for="prefix-checkbox"] {
+    font-size: .9em;
+}
+
+.table-responsive {
+    overflow-x: visible;
+}
+
+.table-responsive input {
+    color: #333;
+}

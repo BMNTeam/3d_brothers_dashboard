@@ -1,0 +1,21 @@
+td(colspan=100).active.no-border-t
+  .panel
+    .panel-heading#frames-header.text-left
+      span.panel-title
+        | Frames
+      .panel-heading-controls
+
+    .panel-body.no-padding-vr
+      // Table
+      table.table.frame-table.dataTable
+        thead
+          tr
+            th(data-order-by='frame').sorting_desc.frame-no #
+            th(data-order-by='average_cpu').sorting.frame-avg-cpu Average CPU
+            th(data-order-by='peak_cpu').sorting.frame-peak-cpu Peak CPU
+            th(data-order-by='average_ram').sorting.frame-avg-ram Average RAM
+            th(data-order-by='peak_ram').sorting.frame-peak-ram Peak RAM
+            th(data-order-by='render_time').sorting.frame-render-duration Render Time
+            th(data-order-by='cost').sorting.frame-cost Cost
+            th.frame-ops
+        tbody.frame-list

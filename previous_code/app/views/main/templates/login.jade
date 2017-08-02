@@ -1,0 +1,17 @@
+- var config = require('config');
+.signin-header
+  strong CGI
+  | Farm
+  a.btn.btn-primary(href=config.createUserURL) Sign Up
+h1.form-header Sign in to your Account
+form#login-form.panel
+  .form-group
+    input#email.form-control.input-lg(type='text', name='email', placeholder='Email')
+  .form-group.signin-password
+    input#password.form-control.input-lg(type='password', name='password', placeholder='Password')
+    a.forgot(href=config.forgotPasswordURL) Forgot?
+  #login-error.note.note-danger.padding-sm-vr.hidden
+  .form-actions
+    input#signin.btn.btn-primary.btn-block.btn-lg(type='submit', value='Sign In')
+
+button.btn.btn-outline.btn-danger#toggle-admin Admin

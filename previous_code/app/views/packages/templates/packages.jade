@@ -1,0 +1,25 @@
+- var user = require('lib/mediator').user
+.page-header
+  h1 Packages
+  if !user.get('admin')
+    .pull-right
+      button.btn.btn-sm.pkg-create(type="button")
+        i.fa.fa-plus
+
+.row
+  .col-sm-12
+    .panel
+      .panel-heading#pkg-header
+        span.panel-title
+          a.editable.renderer-filter(href='#') All
+          |  packages
+        .panel-heading-controls
+      .panel-body.no-padding-vr
+        table.pkg-table.table.dataTable
+          thead
+            tr
+              th(data-order-by='name').pkg-name.sorting Name
+              th.pkg-status Status
+              th(data-order-by='size').pkg-size.sorting Size
+              th.pkg-ops
+          tbody#pkg-list

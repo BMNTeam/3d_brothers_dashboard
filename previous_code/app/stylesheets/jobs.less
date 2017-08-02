@@ -1,0 +1,32 @@
+#job-view {
+    .job-table, .frame-table {
+      > thead th, > tbody td { white-space: nowrap; text-align: center; }
+    }
+
+    .job-table {
+      .job-name { min-width: 200px; width: 70%; text-align: left; }
+      .job-package { min-width: 70px; text-align: left; }
+      .job-frames { min-width: 70px; }
+      .job-render-time { min-width: 95px; }
+      .job-cost { min-width: 70px; }
+      .job-ops { min-width: 116px; width: 116px; text-align: right; }
+
+    }
+
+    .frame-table {
+      .frame-no { text-align: left; }
+      .frame-avg-cpu { min-width: 90px; width: 90px; }
+      .frame-avg-ram { min-width: 90px; width: 90px; }
+      .frame-render-time { min-width: 95px; width: 95px; }
+      .frame-cost { min-width: 60px; width: 60px; }
+      .frame-ops { min-width: 45px; width: 45px; }
+    }
+
+    #create-wizard {
+        display: none;
+        .wizard-pane { display: none; }
+
+        .job-estimates-note { margin: -10px 10px 10px; padding: 10px; }
+    }
+
+}
